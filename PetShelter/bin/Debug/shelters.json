@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Солнечный приют",
+    "Capacity": 10,
+    "HasOpenArea": true
+  },
+  {
+    "Name": "Домик на дереве",
+    "Capacity": 8,
+    "HasOpenArea": false
+  },
+  {
+    "Name": "Зелёный луг",
+    "Capacity": 15,
+    "HasOpenArea": true
+  }
+]

@@ -1,0 +1,247 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\source\\petshelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_c#\\petshelter\\addpetfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\addpetfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\source\\petshelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_c#\\petshelter\\addpetfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\addpetfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\source\\petshelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_c#\\petshelter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\source\\petshelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_c#\\petshelter\\addpetfrom.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\addpetfrom.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter\\petform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\petform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter\\petform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\petform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\source\\petshelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_c#\\petshelter\\petform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\petform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6509BD1-AAE8-419B-BF97-F89AAF63C7EA}|PetShelter\\PetShelter.csproj|solutionrelative:petshelter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5473457-C2BE-4D6D-A2E7-50FD6F0D1AA7}|PetShelter.Model\\PetShelter.Model.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter.model\\data\\datagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5473457-C2BE-4D6D-A2E7-50FD6F0D1AA7}|PetShelter.Model\\PetShelter.Model.csproj|solutionrelative:petshelter.model\\data\\datagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5473457-C2BE-4D6D-A2E7-50FD6F0D1AA7}|PetShelter.Model\\PetShelter.Model.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter.model\\data\\xmldataserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5473457-C2BE-4D6D-A2E7-50FD6F0D1AA7}|PetShelter.Model\\PetShelter.Model.csproj|solutionrelative:petshelter.model\\data\\xmldataserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5473457-C2BE-4D6D-A2E7-50FD6F0D1AA7}|PetShelter.Model\\PetShelter.Model.csproj|C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\petshelter.model\\data\\jsondataserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5473457-C2BE-4D6D-A2E7-50FD6F0D1AA7}|PetShelter.Model\\PetShelter.Model.csproj|solutionrelative:petshelter.model\\data\\jsondataserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PetForm.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\PetForm.cs",
+              "RelativeDocumentMoniker": "PetShelter\\PetForm.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\PetForm.cs",
+              "RelativeToolTip": "PetShelter\\PetForm.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwDMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:13:05.343Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "PetShelter\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\MainForm.Designer.cs",
+              "RelativeToolTip": "PetShelter\\MainForm.Designer.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAMwJUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:16:14.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddPetFrom.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\AddPetFrom.cs",
+              "RelativeDocumentMoniker": "PetShelter\\AddPetFrom.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\AddPetFrom.cs*",
+              "RelativeToolTip": "PetShelter\\AddPetFrom.cs*",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAuwJ0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:18:06.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddPetFrom.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\AddPetFrom.cs",
+              "RelativeDocumentMoniker": "PetShelter\\AddPetFrom.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\AddPetFrom.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "PetShelter\\AddPetFrom.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:13:51.096Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\MainForm.cs",
+              "RelativeDocumentMoniker": "PetShelter\\MainForm.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\MainForm.cs",
+              "RelativeToolTip": "PetShelter\\MainForm.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAkwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:51:17.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\MainForm.cs",
+              "RelativeDocumentMoniker": "PetShelter\\MainForm.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "PetShelter\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:14:00.22Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddPetFrom.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\AddPetFrom.Designer.cs",
+              "RelativeDocumentMoniker": "PetShelter\\AddPetFrom.Designer.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\AddPetFrom.Designer.cs*",
+              "RelativeToolTip": "PetShelter\\AddPetFrom.Designer.cs*",
+              "ViewState": "AgIAADsAAAAAAAAAAAAewFIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:18:31.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PetForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\PetForm.cs",
+              "RelativeDocumentMoniker": "PetShelter\\PetForm.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\PetForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "PetShelter\\PetForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:08:27.354Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PetForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\PetForm.Designer.cs",
+              "RelativeDocumentMoniker": "PetShelter\\PetForm.Designer.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\PetForm.Designer.cs",
+              "RelativeToolTip": "PetShelter\\PetForm.Designer.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAewFMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:37:14.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\Program.cs",
+              "RelativeDocumentMoniker": "PetShelter\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter\\Program.cs",
+              "RelativeToolTip": "PetShelter\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T14:49:30.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter.Model\\Data\\DataGenerator.cs",
+              "RelativeDocumentMoniker": "PetShelter.Model\\Data\\DataGenerator.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter.Model\\Data\\DataGenerator.cs",
+              "RelativeToolTip": "PetShelter.Model\\Data\\DataGenerator.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T14:48:07.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "XmlDataSerializer.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter.Model\\Data\\XmlDataSerializer.cs",
+              "RelativeDocumentMoniker": "PetShelter.Model\\Data\\XmlDataSerializer.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter.Model\\Data\\XmlDataSerializer.cs",
+              "RelativeToolTip": "PetShelter.Model\\Data\\XmlDataSerializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T14:44:39.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JsonDataSerializer.cs",
+              "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter.Model\\Data\\JsonDataSerializer.cs",
+              "RelativeDocumentMoniker": "PetShelter.Model\\Data\\JsonDataSerializer.cs",
+              "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\source\\PetShelter_\u043F\u0440\u043E\u0435\u043A\u0442_\u043F\u043E_\u043F\u0440\u043E\u0433\u0435_C#\\PetShelter.Model\\Data\\JsonDataSerializer.cs",
+              "RelativeToolTip": "PetShelter.Model\\Data\\JsonDataSerializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T14:43:28.319Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

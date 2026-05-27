@@ -1,0 +1,9 @@
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\bin\Debug\PetShelter.Model.dll
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\bin\Debug\PetShelter.Model.pdb
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\obj\Debug\PetShelter.Model.csproj.AssemblyReference.cache
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\obj\Debug\PetShelter.Model.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\obj\Debug\PetShelter.Model.dll
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\obj\Debug\PetShelter.Model.pdb
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Сергей\source\PetShelter_проект_по_проге_C#\PetShelter.Model\obj\Debug\PetShelt.FD1F2DDD.Up2Date
