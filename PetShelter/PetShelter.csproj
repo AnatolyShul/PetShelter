@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPetFrom.cs">
+    <Compile Include="AddPetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddPetFrom.Designer.cs">
-      <DependentUpon>AddPetFrom.cs</DependentUpon>
+    <Compile Include="AddPetForm.Designer.cs">
+      <DependentUpon>AddPetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddPetFrom.resx">
-      <DependentUpon>AddPetFrom.cs</DependentUpon>
+    <EmbeddedResource Include="AddPetForm.resx">
+      <DependentUpon>AddPetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

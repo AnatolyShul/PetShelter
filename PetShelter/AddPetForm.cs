@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using PetShelter.Model.Core;
 
 namespace PetShelter
@@ -12,6 +11,8 @@ namespace PetShelter
 
         public AddPetForm(Shelter shelter)
         {
+            if (shelter == null)
+                throw new ArgumentNullException(nameof(shelter));
             InitializeComponent();
             targetShelter = shelter;
             SetupForm();
@@ -19,7 +20,7 @@ namespace PetShelter
 
         private void SetupForm()
         {
-            // Заполнить типы
+            comboType.DropDownStyle = ComboBoxStyle.DropDownList;
             comboType.Items.AddRange(new object[] { "Кошка", "Собака", "Кролик", "Попугай", "Обезьяна" });
             comboType.SelectedIndex = 0;
 
@@ -28,58 +29,44 @@ namespace PetShelter
             numWeight.Minimum = 0;
             numWeight.Maximum = 500;
             numWeight.DecimalPlaces = 1;
+
+            comboType.SelectedIndexChanged += comboType_SelectedIndexChanged;
+            comboType_SelectedIndexChanged(null, null);
         }
 
         private void comboType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Очистить специфичные поля и добавить новые
             panelSpecific.Controls.Clear();
 
             switch (comboType.SelectedIndex)
             {
-                case 0: // Кошка
-                    AddSpecificField("Порода", "txtBreed");
+                case 0:
                     AddSpecificCheck("Домашняя", "checkIndoor");
+                    AddSpecificCheck("Дружелюбная", "checkFriendly");
                     break;
-                case 1: // Собака
-                    AddSpecificField("Порода", "txtBreed");
+                case 1:
                     AddSpecificCheck("Дрессирована", "checkTrained");
+                    AddSpecificCheck("Сторожевая", "checkGuard");
                     break;
-                case 2: // Кролик
-                    AddSpecificNumeric("Длина ушей (см)", "numEarLength", 0, 50);
+                case 2:
                     AddSpecificCheck("Приучен к лотку", "checkLitter");
+                    AddSpecificCheck("Длинношерстный", "checkLongHaired");
                     break;
-                case 3: // Попугай
-                    AddSpecificNumeric("Знает слов", "numWords", 0, 1000);
-                    AddSpecificNumeric("Размах крыльев (см)", "numWingspan", 0, 100);
+                case 3:
+                    AddSpecificCheck("Умеет говорить", "checkCanTalk");
+                    AddSpecificCheck("Поет", "checkIsSinging");
                     break;
-                case 4: // Обезьяна
-                    AddSpecificField("Вид", "txtSpecies");
-                    AddSpecificNumeric("Длина хвоста (см)", "numTail", 0, 100);
+                case 4:
+                    AddSpecificCheck("Длиннохвостый", "checkLongTailed");
+                    AddSpecificCheck("Социальный", "checkSocial");
                     break;
             }
         }
 
-        private void AddSpecificField(string label, string name)
-        {
-            var lbl = new Label { Text = label, Top = panelSpecific.Controls.Count * 30, Left = 0 };
-            var txt = new TextBox { Name = name, Top = lbl.Top, Left = 120, Width = 150 };
-            panelSpecific.Controls.Add(lbl);
-            panelSpecific.Controls.Add(txt);
-        }
-
         private void AddSpecificCheck(string label, string name)
         {
-            var chk = new CheckBox { Text = label, Name = name, Top = panelSpecific.Controls.Count * 30, Left = 0 };
+            var chk = new CheckBox { Text = label, Name = name, Top = panelSpecific.Controls.Count * 30, Left = 0, Width = 270 };
             panelSpecific.Controls.Add(chk);
-        }
-
-        private void AddSpecificNumeric(string label, string name, int min, int max)
-        {
-            var lbl = new Label { Text = label, Top = panelSpecific.Controls.Count * 30, Left = 0 };
-            var num = new NumericUpDown { Name = name, Top = lbl.Top, Left = 120, Minimum = min, Maximum = max };
-            panelSpecific.Controls.Add(lbl);
-            panelSpecific.Controls.Add(num);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -101,25 +88,25 @@ namespace PetShelter
 
                 switch (comboType.SelectedIndex)
                 {
-                    case 0: // Кошка
+                    case 0:
                         newPet = new Cat(name, age, weight, isClaustrophobic,
-                            GetText("txtBreed"), GetCheck("checkIndoor"));
+                            GetCheck("checkIndoor"), GetCheck("checkFriendly"));
                         break;
-                    case 1: // Собака
+                    case 1:
                         newPet = new Dog(name, age, weight, isClaustrophobic,
-                            GetText("txtBreed"), GetCheck("checkTrained"));
+                            GetCheck("checkTrained"), GetCheck("checkGuard"));
                         break;
-                    case 2: // Кролик
+                    case 2:
                         newPet = new Rabbit(name, age, weight, isClaustrophobic,
-                            (int)GetNumeric("numEarLength"), GetCheck("checkLitter"));
+                            GetCheck("checkLitter"), GetCheck("checkLongHaired"));
                         break;
-                    case 3: // Попугай
+                    case 3:
                         newPet = new Parrot(name, age, weight, isClaustrophobic,
-                            (int)GetNumeric("numWords"), (int)GetNumeric("numWingspan"));
+                            GetCheck("checkCanTalk"), GetCheck("checkIsSinging"));
                         break;
-                    case 4: // Обезьяна
+                    case 4:
                         newPet = new Monkey(name, age, weight, isClaustrophobic,
-                            GetText("txtSpecies"), (int)GetNumeric("numTail"));
+                            GetCheck("checkLongTailed"), GetCheck("checkSocial"));
                         break;
                 }
 
@@ -134,19 +121,12 @@ namespace PetShelter
             }
         }
 
-        private string GetText(string name)
-        {
-            return (panelSpecific.Controls.Find(name, true)[0] as TextBox)?.Text ?? "";
-        }
-
         private bool GetCheck(string name)
         {
-            return (panelSpecific.Controls.Find(name, true)[0] as CheckBox)?.Checked ?? false;
-        }
-
-        private decimal GetNumeric(string name)
-        {
-            return (panelSpecific.Controls.Find(name, true)[0] as NumericUpDown)?.Value ?? 0;
+            var control = panelSpecific.Controls.Find(name, true);
+            if (control.Length > 0 && control[0] is CheckBox chk)
+                return chk.Checked;
+            return false;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

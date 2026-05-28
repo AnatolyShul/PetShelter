@@ -44,19 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Animal.cs" />
     <Compile Include="Core\Cat.cs" />
     <Compile Include="Core\Dog.cs" />
     <Compile Include="Core\IChangeable.cs" />
     <Compile Include="Core\ICountable.cs" />
     <Compile Include="Core\IFilter.cs" />
+    <Compile Include="Core\IReportable.cs" />
     <Compile Include="Core\Monkey.cs" />
     <Compile Include="Core\Parrot.cs" />
     <Compile Include="Core\Pet.cs" />
+    <Compile Include="Core\PetPartial.cs" />
     <Compile Include="Core\Rabbit.cs" />
     <Compile Include="Core\Shelter.cs" />
+    <Compile Include="Core\ShelterChangeable.cs" />
     <Compile Include="Core\ShelterFilter.cs" />
     <Compile Include="Data\DataGenerator.cs" />
     <Compile Include="Data\JsonDataSerializer.cs" />
+    <Compile Include="Data\ReportSerializer.cs" />
     <Compile Include="Data\SerializerBase.cs" />
     <Compile Include="Data\XmlDataSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

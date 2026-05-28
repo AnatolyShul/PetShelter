@@ -11,16 +11,16 @@ namespace PetShelter
     public partial class MainForm : Form
     {
         private List<Shelter> shelters;
-        private SerializerBase serializer;
-        private string dataPath = "shelters.json";
+        private SerializerBase currentSerializer;
+        private ReportSerializerBase currentReportSerializer;
+        private string jsonPath = "shelters.json";
+        private string xmlPath = "shelters.xml";
+        private string reportsDir = "Reports";
+        private int lastShelterIndex = 0;
+        private int lastPetTypeIndex = 0;
+        private bool lastOpenAreaChecked = false;
+        private bool lastClaustrophobicChecked = false;
 
-        private void btnGenerate_Click(object sender, EventArgs e)
-        {
-            shelters = DataGenerator.GenerateData();
-            FillShelterCombo();
-            SaveData();
-            MessageBox.Show("Данные сгенерированы!");
-        }
         public MainForm()
         {
             InitializeComponent();
@@ -29,19 +29,36 @@ namespace PetShelter
 
         private void InitializeData()
         {
-            // При первом запуске — создать данные
-            if (!File.Exists(dataPath))
-            {
-                shelters = DataGenerator.GenerateData();
-                SaveData();
-            }
-            else
-            {
-                LoadData();
-            }
+            shelters = new List<Shelter>();
 
             FillShelterCombo();
             FillPetTypeCombo();
+            FillFormatCombo();
+            RestoreFilters();
+        }
+
+        private void SaveFilterState()
+        {
+            lastShelterIndex = comboShelters.SelectedIndex;
+            lastPetTypeIndex = comboPetType.SelectedIndex;
+            lastOpenAreaChecked = checkOpenArea.Checked;
+            lastClaustrophobicChecked = checkClaustrophobic.Checked;
+        }
+
+        private void RestoreFilters()
+        {
+            if (lastShelterIndex >= 0 && lastShelterIndex < comboShelters.Items.Count)
+                comboShelters.SelectedIndex = lastShelterIndex;
+            else
+                comboShelters.SelectedIndex = 0;
+
+            if (lastPetTypeIndex >= 0 && lastPetTypeIndex < comboPetType.Items.Count)
+                comboPetType.SelectedIndex = lastPetTypeIndex;
+            else
+                comboPetType.SelectedIndex = 0;
+
+            checkOpenArea.Checked = lastOpenAreaChecked;
+            checkClaustrophobic.Checked = lastClaustrophobicChecked;
         }
 
         private void FillShelterCombo()
@@ -52,7 +69,6 @@ namespace PetShelter
             {
                 comboShelters.Items.Add(shelter.Name);
             }
-            comboShelters.SelectedIndex = 0;
         }
 
         private void FillPetTypeCombo()
@@ -64,45 +80,131 @@ namespace PetShelter
             comboPetType.Items.Add("Кролик");
             comboPetType.Items.Add("Попугай");
             comboPetType.Items.Add("Обезьяна");
-            comboPetType.SelectedIndex = 0;
         }
 
-
-        private List<Shelter> GetSelectedShelters()
+        private void FillFormatCombo()
         {
-            if (comboShelters.SelectedIndex == 0)
-                return shelters;
+            comboFormat.Items.Clear();
+            comboFormat.Items.Add("JSON");
+            comboFormat.Items.Add("XML");
+            comboFormat.SelectedIndex = 0;
+            comboFormat.SelectedIndexChanged += comboFormat_SelectedIndexChanged;
+            UpdateSerializers();
+        }
 
+        private void UpdateSerializers()
+        {
+            bool isJson = comboFormat.SelectedIndex == 0;
+            string path = isJson ? jsonPath : xmlPath;
+            currentSerializer = isJson
+                ? (SerializerBase)new JsonDataSerializer(path)
+                : new XmlDataSerializer(path);
+            currentReportSerializer = ReportSerializerBase.CreateSerializer(reportsDir, isJson);
+        }
+
+        private void comboFormat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bool newIsJson = comboFormat.SelectedIndex == 0;
+                string newPath = newIsJson ? jsonPath : xmlPath;
+                var newSerializer = newIsJson
+                    ? (SerializerBase)new JsonDataSerializer(newPath)
+                    : new XmlDataSerializer(newPath);
+
+                if (shelters != null && shelters.Count > 0)
+                {
+                    newSerializer.Serialize(shelters);
+                }
+
+                CopyReportsToNewFormat(newIsJson);
+
+                UpdateSerializers();
+
+                MessageBox.Show($"Формат изменён на {(newIsJson ? "JSON" : "XML")}. Данные и отчёты скопированы.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка смены формата: {ex.Message}");
+            }
+        }
+
+        private void CopyReportsToNewFormat(bool newFormatIsJson)
+        {
+            bool oldFormatIsJson = !newFormatIsJson;
+
+            var oldSerializer = ReportSerializerBase.CreateSerializer(reportsDir, oldFormatIsJson);
+            var newSerializer = ReportSerializerBase.CreateSerializer(reportsDir + "_temp", newFormatIsJson);
+
+            foreach (var file in oldSerializer.GetReportFiles())
+            {
+                string fileName = Path.GetFileNameWithoutExtension(file);
+                var pets = oldSerializer.LoadReport(fileName);
+                newSerializer.SaveReport(fileName, pets);
+            }
+
+            foreach (var file in oldSerializer.GetReportFiles())
+            {
+                File.Delete(file);
+            }
+
+            if (Directory.Exists(reportsDir + "_temp"))
+            {
+                foreach (var file in Directory.GetFiles(reportsDir + "_temp"))
+                {
+                    string dest = Path.Combine(reportsDir, Path.GetFileName(file));
+                    File.Copy(file, dest, true);
+                }
+                Directory.Delete(reportsDir + "_temp", true);
+            }
+        }
+
+        private Shelter GetSelectedShelter()
+        {
+            if (comboShelters.SelectedIndex <= 0 || comboShelters.SelectedIndex >= comboShelters.Items.Count)
+                return null;
             string selectedName = comboShelters.SelectedItem.ToString();
-            return shelters.Where(s => s.Name == selectedName).ToList();
+            return shelters.FirstOrDefault(s => s.Name == selectedName);
         }
 
-        private List<Pet> FilterPets(List<Shelter> selectedShelters)
+        public List<Shelter> GetSelectedShelters()
         {
-            var allPets = new List<Pet> ();
+            var result = new List<Shelter>();
+
+            if (comboShelters.SelectedIndex == 0)
+            {
+                if (checkOpenArea.Checked)
+                    result = shelters.Where(s => s.HasOpenArea).ToList();
+                else
+                    result = shelters;
+            }
+            else
+            {
+                var single = GetSelectedShelter();
+                if (single != null)
+                    result = new List<Shelter> { single };
+            }
+
+            return result;
+        }
+
+        public List<Pet> FilterPets(List<Shelter> selectedShelters)
+        {
+            var allPets = new List<Pet>();
             foreach (var shelter in selectedShelters)
             {
                 allPets.AddRange(shelter.GetPets());
             }
 
-            // Фильтр по типу
             if (comboPetType.SelectedIndex > 0)
             {
                 Type targetType = GetTypeFromCombo();
                 allPets = allPets.Where(p => p.GetType() == targetType).ToList();
             }
 
-            // Фильтр по клаустрофобии
             if (checkClaustrophobic.Checked)
             {
                 allPets = allPets.Where(p => p.IsClaustrophobic).ToList();
-            }
-
-            // Фильтр по открытой площадке (ищем только приюты с открытой площадкой)
-            if (checkOpenArea.Checked)
-            {
-                var openAreaShelters = selectedShelters.Where(s => s.HasOpenArea).ToList();
-                allPets = allPets.Where(p => openAreaShelters.Any(s => s.GetPets().Contains(p))).ToList();
             }
 
             return allPets;
@@ -121,45 +223,105 @@ namespace PetShelter
             }
         }
 
+        private void btnShowPets_Click(object sender, EventArgs e)
+        {
+            SaveFilterState();
+            var selectedShelters = GetSelectedShelters();
+            if (selectedShelters.Count == 0)
+            {
+                MessageBox.Show("Выберите существующий приют!");
+                return;
+            }
+            var filteredPets = FilterPets(selectedShelters);
+            var current = GetSelectedShelter();
+            bool isJson = comboFormat.SelectedIndex == 0;
+            var petForm = new PetForm(filteredPets, shelters, current, this, isJson, reportsDir);
+            if (petForm.ShowDialog() == DialogResult.OK)
+            {
+                SaveData();
+                ApplyFiltersAfterChange();
+            }
+        }
+
+        public void ApplyFiltersAfterChange()
+        {
+            var selectedShelters = GetSelectedShelters();
+            if (selectedShelters.Count == 0)
+            {
+                comboShelters.SelectedIndex = 0;
+                selectedShelters = shelters;
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveData();
-            MessageBox.Show("Данные сохранены!");
+            try
+            {
+                SaveData();
+                MessageBox.Show("Данные сохранены!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка сохранения: {ex.Message}");
+            }
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            LoadData();
+            try
+            {
+                SaveFilterState();
+                LoadData();
+                FillShelterCombo();
+                FillPetTypeCombo();
+                RestoreFilters();
+
+                var selectedShelters = GetSelectedShelters();
+                var filteredPets = FilterPets(selectedShelters);
+
+                MessageBox.Show($"Данные загружены! Приютов: {shelters.Count}, питомцев: {filteredPets.Count}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки: {ex.Message}");
+            }
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            SaveFilterState();
+            shelters = DataGenerator.GenerateData();
             FillShelterCombo();
-            MessageBox.Show("Данные загружены!");
+            FillPetTypeCombo();
+            RestoreFilters();
+            SaveData();
+            MessageBox.Show("Данные сгенерированы!");
         }
 
         private void SaveData()
         {
-            serializer = new JsonDataSerializer(dataPath);
-            serializer.Serialize(shelters);
+            UpdateSerializers();
+            currentSerializer.Serialize(shelters);
         }
 
         private void LoadData()
         {
-            serializer = new JsonDataSerializer(dataPath);
-            shelters = serializer.Deserialize();
-        }
-
-        private void btnShowPets_Click(object sender, EventArgs e)
-        {
-            var selectedShelters = GetSelectedShelters();
-            var filteredPets = FilterPets(selectedShelters);
-
-            // Найти текущий приют для добавления
-            Shelter current = null;
-            if (comboShelters.SelectedIndex > 0)
-                current = selectedShelters.FirstOrDefault();
-            else
-                current = shelters.FirstOrDefault();
-
-            var petForm = new PetForm(filteredPets, shelters, current);
-            petForm.ShowDialog();
+            string path = comboFormat.SelectedIndex == 0 ? jsonPath : xmlPath;
+            if (!File.Exists(path))
+            {
+                string otherPath = comboFormat.SelectedIndex == 0 ? xmlPath : jsonPath;
+                if (File.Exists(otherPath))
+                {
+                    var otherSerializer = comboFormat.SelectedIndex == 0
+                        ? (SerializerBase)new XmlDataSerializer(otherPath)
+                        : new JsonDataSerializer(otherPath);
+                    shelters = otherSerializer.Deserialize();
+                    SaveData();
+                    return;
+                }
+            }
+            UpdateSerializers();
+            shelters = currentSerializer.Deserialize();
         }
     }
 }

@@ -1,21 +1,38 @@
-﻿namespace PetShelter.Model.Core
+﻿using System;
+using System.Xml.Serialization;
+
+namespace PetShelter.Model.Core
 {
-    public class Cat : Pet
+    [Serializable]
+    public partial class Cat : Pet
     {
-        public string Breed { get; set; }
         public bool IsIndoor { get; set; }
+        public bool IsFriendly { get; set; }
+
+        public Cat() { }
 
         public Cat(string name, int age, double weight, bool isClaustrophobic,
-                   string breed, bool isIndoor)
+                   bool isIndoor, bool isFriendly)
             : base(name, age, weight, isClaustrophobic)
         {
-            Breed = breed;
             IsIndoor = isIndoor;
+            IsFriendly = isFriendly;
+        }
+
+        public Cat(string name, int age, double weight,
+                   bool isIndoor, bool isFriendly)
+            : this(name, age, weight, true, isIndoor, isFriendly)
+        {
+        }
+
+        public override string GetSpecies()
+        {
+            return "Кошка";
         }
 
         public override string ToString()
         {
-            return base.ToString() + $", порода: {Breed}, домашний: {(IsIndoor ? "да" : "нет")}";
+            return base.ToString() + $", домашний: {(IsIndoor ? "да" : "нет")}, дружелюбный: {(IsFriendly ? "да" : "нет")}";
         }
     }
 }

@@ -1,32 +1,30 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 namespace PetShelter.Model.Core
 {
-    public abstract class Pet
+    [Serializable]
+    [XmlInclude(typeof(Cat))]
+    [XmlInclude(typeof(Dog))]
+    [XmlInclude(typeof(Rabbit))]
+    [XmlInclude(typeof(Parrot))]
+    [XmlInclude(typeof(Monkey))]
+    public abstract partial class Pet : Animal
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public double Weight { get; set; }
         public bool IsClaustrophobic { get; set; }
 
-        protected Pet(string name, int age, double weight, bool isClaustrophobic)
+        public Pet() { }
+
+        public Pet(string name, int age, double weight, bool isClaustrophobic)
+            : base(name, age, weight)
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                Name = "Без имени";
-            }
-            else
-            {
-                Name = name;
-            }
-            Age = age;
-            Weight = weight;
             IsClaustrophobic = isClaustrophobic;
         }
 
         public override string ToString()
         {
-            return $"{Name}, {Age} лет, {Weight} кг";
+            return base.ToString();
         }
+
     }
 }

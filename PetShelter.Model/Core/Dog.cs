@@ -1,21 +1,37 @@
-﻿namespace PetShelter.Model.Core
-{
-    public class Dog : Pet
-    {
-        public string Breed { get; set; }
-        public bool IsTrained { get; set; }
+﻿using System;
+using System.Xml.Serialization;
 
+namespace PetShelter.Model.Core
+{
+    [Serializable]
+    public partial class Dog : Pet
+    {
+        public bool IsTrained { get; set; }
+        public bool IsGuardDog { get; set; }
+
+        public Dog() { }
         public Dog(string name, int age, double weight, bool isClaustrophobic,
-                   string breed, bool isTrained)
+                   bool isTrained, bool isGuardDog)
             : base(name, age, weight, isClaustrophobic)
         {
-            Breed = breed;
             IsTrained = isTrained;
+            IsGuardDog = isGuardDog;
+        }
+
+        public Dog(string name, int age, double weight,
+                   bool isTrained, bool isGuardDog)
+            : this(name, age, weight, false, isTrained, isGuardDog)
+        {
+        }
+
+        public override string GetSpecies()
+        {
+            return "Собака";
         }
 
         public override string ToString()
         {
-            return base.ToString() + $", порода: {Breed}, дрессирован: {(IsTrained ? "да" : "нет")}";
+            return base.ToString() + $", дрессирован: {(IsTrained ? "да" : "нет")}, сторожевой: {(IsGuardDog ? "да" : "нет")}";
         }
     }
 }

@@ -1,21 +1,37 @@
-﻿namespace PetShelter.Model.Core
-{
-    public class Monkey : Pet
-    {
-        public string Species { get; set; }
-        public int TailLength { get; set; }
+﻿using System;
+using System.Xml.Serialization;
 
+namespace PetShelter.Model.Core
+{
+    [Serializable]
+    public partial class Monkey : Pet
+    {
+        public bool IsLongTailed { get; set; }
+        public bool IsSocial { get; set; }
+
+        public Monkey() { }
         public Monkey(string name, int age, double weight, bool isClaustrophobic,
-                      string species, int tailLength)
+                      bool isLongTailed, bool isSocial)
             : base(name, age, weight, isClaustrophobic)
         {
-            Species = species;
-            TailLength = tailLength;
+            IsLongTailed = isLongTailed;
+            IsSocial = isSocial;
+        }
+
+        public Monkey(string name, int age, double weight,
+                      bool isLongTailed, bool isSocial)
+            : this(name, age, weight, true, isLongTailed, isSocial)
+        {
+        }
+
+        public override string GetSpecies()
+        {
+            return "Обезьяна";
         }
 
         public override string ToString()
         {
-            return base.ToString() + $", вид: {Species}, длина хвоста: {TailLength} см";
+            return base.ToString() + $", длиннохвостый: {(IsLongTailed ? "да" : "нет")}, социальный: {(IsSocial ? "да" : "нет")}";
         }
     }
 }

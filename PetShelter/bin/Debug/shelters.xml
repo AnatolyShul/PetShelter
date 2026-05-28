@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfShelter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Shelter>
+    <Name>Солнечный приют</Name>
+    <Capacity>10</Capacity>
+    <HasOpenArea>true</HasOpenArea>
+    <Pets>
+      <Pet xsi:type="Cat">
+        <Name>Мурзик</Name>
+        <Age>3</Age>
+        <Weight>4.5</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsIndoor>true</IsIndoor>
+        <IsFriendly>true</IsFriendly>
+      </Pet>
+      <Pet xsi:type="Dog">
+        <Name>Бобик</Name>
+        <Age>5</Age>
+        <Weight>12</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsTrained>true</IsTrained>
+        <IsGuardDog>true</IsGuardDog>
+      </Pet>
+      <Pet xsi:type="Rabbit">
+        <Name>Банни</Name>
+        <Age>2</Age>
+        <Weight>1.2</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsLitterTrained>true</IsLitterTrained>
+        <IsLongHaired>true</IsLongHaired>
+      </Pet>
+      <Pet xsi:type="Parrot">
+        <Name>Кеша</Name>
+        <Age>4</Age>
+        <Weight>0.3</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <CanTalk>true</CanTalk>
+        <IsSinging>true</IsSinging>
+      </Pet>
+      <Pet xsi:type="Monkey">
+        <Name>Чи-Чи</Name>
+        <Age>3</Age>
+        <Weight>8.5</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsLongTailed>true</IsLongTailed>
+        <IsSocial>true</IsSocial>
+      </Pet>
+    </Pets>
+  </Shelter>
+  <Shelter>
+    <Name>Домик на дереве</Name>
+    <Capacity>8</Capacity>
+    <HasOpenArea>false</HasOpenArea>
+    <Pets>
+      <Pet xsi:type="Cat">
+        <Name>Вася</Name>
+        <Age>2</Age>
+        <Weight>3.8</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsIndoor>false</IsIndoor>
+        <IsFriendly>false</IsFriendly>
+      </Pet>
+      <Pet xsi:type="Dog">
+        <Name>Шарик</Name>
+        <Age>4</Age>
+        <Weight>15</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsTrained>false</IsTrained>
+        <IsGuardDog>false</IsGuardDog>
+      </Pet>
+      <Pet xsi:type="Rabbit">
+        <Name>Пушок</Name>
+        <Age>1</Age>
+        <Weight>0.9</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsLitterTrained>false</IsLitterTrained>
+        <IsLongHaired>false</IsLongHaired>
+      </Pet>
+      <Pet xsi:type="Parrot">
+        <Name>Гоша</Name>
+        <Age>2</Age>
+        <Weight>0.25</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <CanTalk>false</CanTalk>
+        <IsSinging>false</IsSinging>
+      </Pet>
+    </Pets>
+  </Shelter>
+  <Shelter>
+    <Name>Зелёный луг</Name>
+    <Capacity>15</Capacity>
+    <HasOpenArea>true</HasOpenArea>
+    <Pets>
+      <Pet xsi:type="Dog">
+        <Name>Рекс</Name>
+        <Age>6</Age>
+        <Weight>20</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsTrained>true</IsTrained>
+        <IsGuardDog>true</IsGuardDog>
+      </Pet>
+      <Pet xsi:type="Cat">
+        <Name>Леопольд</Name>
+        <Age>7</Age>
+        <Weight>5</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsIndoor>true</IsIndoor>
+        <IsFriendly>true</IsFriendly>
+      </Pet>
+      <Pet xsi:type="Rabbit">
+        <Name>Ушастик</Name>
+        <Age>3</Age>
+        <Weight>1.5</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsLitterTrained>true</IsLitterTrained>
+        <IsLongHaired>true</IsLongHaired>
+      </Pet>
+      <Pet xsi:type="Monkey">
+        <Name>Бонзо</Name>
+        <Age>5</Age>
+        <Weight>12</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsLongTailed>true</IsLongTailed>
+        <IsSocial>true</IsSocial>
+      </Pet>
+      <Pet xsi:type="Parrot">
+        <Name>Ара</Name>
+        <Age>10</Age>
+        <Weight>0.4</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <CanTalk>true</CanTalk>
+        <IsSinging>true</IsSinging>
+      </Pet>
+      <Pet xsi:type="Dog">
+        <Name>Тузик</Name>
+        <Age>2</Age>
+        <Weight>8</Weight>
+        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsTrained>false</IsTrained>
+        <IsGuardDog>false</IsGuardDog>
+      </Pet>
+    </Pets>
+  </Shelter>
+</ArrayOfShelter>

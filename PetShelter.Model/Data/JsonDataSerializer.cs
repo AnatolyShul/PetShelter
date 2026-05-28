@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using PetShelter.Model.Core;
@@ -11,17 +12,40 @@ namespace PetShelter.Model.Data
 
         public override void Serialize(List<Shelter> shelters)
         {
-            string json = JsonConvert.SerializeObject(shelters, Formatting.Indented);
-            File.WriteAllText(FilePath, json);
+            try
+            {
+                var settings = new JsonSerializerSettings
+                {
+                    TypeNameHandling = TypeNameHandling.Auto,
+                    Formatting = Formatting.Indented
+                };
+                string json = JsonConvert.SerializeObject(shelters, settings);
+                File.WriteAllText(FilePath, json);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Ошибка сериализации JSON: {ex.Message}", ex);
+            }
         }
 
         public override List<Shelter> Deserialize()
         {
-            if (!File.Exists(FilePath))
-                return new List<Shelter>();
+            try
+            {
+                if (!File.Exists(FilePath))
+                    return new List<Shelter>();
 
-            string json = File.ReadAllText(FilePath);
-            return JsonConvert.DeserializeObject<List<Shelter>>(json);
+                string json = File.ReadAllText(FilePath);
+                var settings = new JsonSerializerSettings
+                {
+                    TypeNameHandling = TypeNameHandling.Auto
+                };
+                return JsonConvert.DeserializeObject<List<Shelter>>(json, settings) ?? new List<Shelter>();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Ошибка десериализации JSON: {ex.Message}", ex);
+            }
         }
     }
 }

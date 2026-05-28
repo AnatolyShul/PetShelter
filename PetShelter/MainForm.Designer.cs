@@ -2,15 +2,8 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Обязательная переменная конструктора.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Освободить все используемые ресурсы.
-        /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,16 +13,11 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
-
-        /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
-        /// </summary>
         private void InitializeComponent()
         {
             this.comboShelters = new System.Windows.Forms.ComboBox();
             this.comboPetType = new System.Windows.Forms.ComboBox();
+            this.comboFormat = new System.Windows.Forms.ComboBox();
             this.btnShowPets = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -37,107 +25,103 @@
             this.checkClaustrophobic = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // comboShelters
-            // 
+
+            this.comboShelters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboShelters.FormattingEnabled = true;
-            this.comboShelters.Location = new System.Drawing.Point(354, 141);
+            this.comboShelters.Location = new System.Drawing.Point(200, 30);
             this.comboShelters.Name = "comboShelters";
-            this.comboShelters.Size = new System.Drawing.Size(130, 28);
+            this.comboShelters.Size = new System.Drawing.Size(250, 28);
             this.comboShelters.TabIndex = 0;
-            // 
-            // comboPetType
-            // 
+
+            this.comboPetType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPetType.FormattingEnabled = true;
-            this.comboPetType.Location = new System.Drawing.Point(354, 206);
+            this.comboPetType.Location = new System.Drawing.Point(200, 80);
             this.comboPetType.Name = "comboPetType";
-            this.comboPetType.Size = new System.Drawing.Size(130, 28);
+            this.comboPetType.Size = new System.Drawing.Size(250, 28);
             this.comboPetType.TabIndex = 1;
-            // 
-            // btnShowPets
-            // 
-            this.btnShowPets.Location = new System.Drawing.Point(211, 420);
+
+            this.comboFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboFormat.FormattingEnabled = true;
+            this.comboFormat.Location = new System.Drawing.Point(200, 130);
+            this.comboFormat.Name = "comboFormat";
+            this.comboFormat.Size = new System.Drawing.Size(250, 28);
+            this.comboFormat.TabIndex = 2;
+
+            this.btnShowPets.Location = new System.Drawing.Point(30, 330);
             this.btnShowPets.Name = "btnShowPets";
-            this.btnShowPets.Size = new System.Drawing.Size(121, 37);
-            this.btnShowPets.TabIndex = 2;
-            this.btnShowPets.Text = "Показать";
+            this.btnShowPets.Size = new System.Drawing.Size(200, 40);
+            this.btnShowPets.TabIndex = 3;
+            this.btnShowPets.Text = "Показать питомцев";
             this.btnShowPets.UseVisualStyleBackColor = true;
             this.btnShowPets.Click += new System.EventHandler(this.btnShowPets_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(211, 504);
+
+            this.btnSave.Location = new System.Drawing.Point(30, 390);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(125, 37);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.Size = new System.Drawing.Size(200, 40);
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(370, 504);
+
+            this.btnLoad.Location = new System.Drawing.Point(250, 390);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(114, 37);
-            this.btnLoad.TabIndex = 4;
+            this.btnLoad.Size = new System.Drawing.Size(200, 40);
+            this.btnLoad.TabIndex = 5;
             this.btnLoad.Text = "Загрузить";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // checkOpenArea
-            // 
+
             this.checkOpenArea.AutoSize = true;
-            this.checkOpenArea.Location = new System.Drawing.Point(211, 348);
+            this.checkOpenArea.Location = new System.Drawing.Point(30, 230);
             this.checkOpenArea.Name = "checkOpenArea";
             this.checkOpenArea.Size = new System.Drawing.Size(269, 24);
-            this.checkOpenArea.TabIndex = 5;
+            this.checkOpenArea.TabIndex = 6;
             this.checkOpenArea.Text = "Только с открытой площадкой";
             this.checkOpenArea.UseVisualStyleBackColor = true;
-            // 
-            // checkClaustrophobic
-            // 
+
             this.checkClaustrophobic.AutoSize = true;
-            this.checkClaustrophobic.Location = new System.Drawing.Point(211, 282);
+            this.checkClaustrophobic.Location = new System.Drawing.Point(30, 270);
             this.checkClaustrophobic.Name = "checkClaustrophobic";
             this.checkClaustrophobic.Size = new System.Drawing.Size(241, 24);
-            this.checkClaustrophobic.TabIndex = 6;
+            this.checkClaustrophobic.TabIndex = 7;
             this.checkClaustrophobic.Text = "Показать клаустрофобных";
             this.checkClaustrophobic.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
+
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(207, 141);
+            this.label1.Location = new System.Drawing.Point(30, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 20);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 8;
             this.label1.Text = "Выберите приют:";
-            // 
-            // label2
-            // 
+
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(207, 206);
+            this.label2.Location = new System.Drawing.Point(30, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 9;
             this.label2.Text = "Тип животного:";
-            // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Location = new System.Drawing.Point(370, 422);
+
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 133);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Формат данных:";
+
+            this.btnGenerate.Location = new System.Drawing.Point(250, 330);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(229, 35);
-            this.btnGenerate.TabIndex = 9;
+            this.btnGenerate.Size = new System.Drawing.Size(200, 40);
+            this.btnGenerate.TabIndex = 11;
             this.btnGenerate.Text = "Сгенерировать данные";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // MainForm
-            // 
-            this.ClientSize = new System.Drawing.Size(1094, 683);
+
+            this.ClientSize = new System.Drawing.Size(500, 460);
             this.Controls.Add(this.btnGenerate);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkClaustrophobic);
@@ -145,18 +129,18 @@
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnShowPets);
+            this.Controls.Add(this.comboFormat);
             this.Controls.Add(this.comboPetType);
             this.Controls.Add(this.comboShelters);
             this.Name = "MainForm";
+            this.Text = "PetShelter";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
-        #endregion
 
         private System.Windows.Forms.ComboBox comboShelters;
         private System.Windows.Forms.ComboBox comboPetType;
+        private System.Windows.Forms.ComboBox comboFormat;
         private System.Windows.Forms.Button btnShowPets;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;
@@ -164,7 +148,7 @@
         private System.Windows.Forms.CheckBox checkClaustrophobic;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGenerate;
     }
 }
-

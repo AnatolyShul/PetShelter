@@ -1,0 +1,119 @@
+[
+  {
+    "$type": "PetShelter.Model.Core.Rabbit, PetShelter.Model",
+    "IsLitterTrained": true,
+    "IsLongHaired": true,
+    "IsClaustrophobic": false,
+    "Name": "Банни",
+    "Age": 2,
+    "Weight": 1.2
+  },
+  {
+    "$type": "PetShelter.Model.Core.Parrot, PetShelter.Model",
+    "CanTalk": true,
+    "IsSinging": true,
+    "IsClaustrophobic": false,
+    "Name": "Кеша",
+    "Age": 4,
+    "Weight": 0.3
+  },
+  {
+    "$type": "PetShelter.Model.Core.Monkey, PetShelter.Model",
+    "IsLongTailed": true,
+    "IsSocial": true,
+    "IsClaustrophobic": false,
+    "Name": "Чи-Чи",
+    "Age": 3,
+    "Weight": 8.5
+  },
+  {
+    "$type": "PetShelter.Model.Core.Cat, PetShelter.Model",
+    "IsIndoor": false,
+    "IsFriendly": false,
+    "IsClaustrophobic": false,
+    "Name": "Вася",
+    "Age": 2,
+    "Weight": 3.8
+  },
+  {
+    "$type": "PetShelter.Model.Core.Dog, PetShelter.Model",
+    "IsTrained": false,
+    "IsGuardDog": false,
+    "IsClaustrophobic": false,
+    "Name": "Шарик",
+    "Age": 4,
+    "Weight": 15.0
+  },
+  {
+    "$type": "PetShelter.Model.Core.Rabbit, PetShelter.Model",
+    "IsLitterTrained": false,
+    "IsLongHaired": false,
+    "IsClaustrophobic": false,
+    "Name": "Пушок",
+    "Age": 1,
+    "Weight": 0.9
+  },
+  {
+    "$type": "PetShelter.Model.Core.Parrot, PetShelter.Model",
+    "CanTalk": false,
+    "IsSinging": false,
+    "IsClaustrophobic": false,
+    "Name": "Гоша",
+    "Age": 2,
+    "Weight": 0.25
+  },
+  {
+    "$type": "PetShelter.Model.Core.Dog, PetShelter.Model",
+    "IsTrained": true,
+    "IsGuardDog": true,
+    "IsClaustrophobic": false,
+    "Name": "Рекс",
+    "Age": 6,
+    "Weight": 20.0
+  },
+  {
+    "$type": "PetShelter.Model.Core.Cat, PetShelter.Model",
+    "IsIndoor": true,
+    "IsFriendly": true,
+    "IsClaustrophobic": false,
+    "Name": "Леопольд",
+    "Age": 7,
+    "Weight": 5.0
+  },
+  {
+    "$type": "PetShelter.Model.Core.Rabbit, PetShelter.Model",
+    "IsLitterTrained": true,
+    "IsLongHaired": true,
+    "IsClaustrophobic": false,
+    "Name": "Ушастик",
+    "Age": 3,
+    "Weight": 1.5
+  },
+  {
+    "$type": "PetShelter.Model.Core.Monkey, PetShelter.Model",
+    "IsLongTailed": true,
+    "IsSocial": true,
+    "IsClaustrophobic": false,
+    "Name": "Бонзо",
+    "Age": 5,
+    "Weight": 12.0
+  },
+  {
+    "$type": "PetShelter.Model.Core.Parrot, PetShelter.Model",
+    "CanTalk": true,
+    "IsSinging": true,
+    "IsClaustrophobic": false,
+    "Name": "Ара",
+    "Age": 10,
+    "Weight": 0.4
+  },
+  {
+    "$type": "PetShelter.Model.Core.Dog, PetShelter.Model",
+    "IsTrained": false,
+    "IsGuardDog": false,
+    "IsClaustrophobic": false,
+    "Name": "Тузик",
+    "Age": 2,
+    "Weight": 8.0
+  }
+]
