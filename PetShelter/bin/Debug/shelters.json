@@ -5,6 +5,15 @@
     "HasOpenArea": true,
     "Pets": [
       {
+        "$type": "PetShelter.Model.Core.Cat, PetShelter.Model",
+        "IsIndoor": true,
+        "IsFriendly": true,
+        "IsClaustrophobic": true,
+        "Name": "Мурзик",
+        "Age": 3,
+        "Weight": 4.5
+      },
+      {
         "$type": "PetShelter.Model.Core.Dog, PetShelter.Model",
         "IsTrained": true,
         "IsGuardDog": true,

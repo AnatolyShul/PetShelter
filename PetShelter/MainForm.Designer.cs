@@ -1,4 +1,6 @@
-﻿namespace PetShelter
+﻿using System.Windows.Forms;
+
+namespace PetShelter
 {
     partial class MainForm
     {
@@ -29,97 +31,114 @@
             this.btnGenerate = new System.Windows.Forms.Button();
             this.SuspendLayout();
 
-            this.comboShelters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            int leftPanelWidth = 320;
+
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Выберите приют:";
+            this.label1.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            this.comboShelters.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboShelters.FormattingEnabled = true;
-            this.comboShelters.Location = new System.Drawing.Point(200, 30);
+            this.comboShelters.Location = new System.Drawing.Point(30, 55);
             this.comboShelters.Name = "comboShelters";
-            this.comboShelters.Size = new System.Drawing.Size(250, 28);
+            this.comboShelters.Size = new System.Drawing.Size(leftPanelWidth - 60, 28);
             this.comboShelters.TabIndex = 0;
+            this.comboShelters.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 
-            this.comboPetType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Тип животного:";
+            this.label2.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            this.comboPetType.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboPetType.FormattingEnabled = true;
-            this.comboPetType.Location = new System.Drawing.Point(200, 80);
+            this.comboPetType.Location = new System.Drawing.Point(30, 125);
             this.comboPetType.Name = "comboPetType";
-            this.comboPetType.Size = new System.Drawing.Size(250, 28);
+            this.comboPetType.Size = new System.Drawing.Size(leftPanelWidth - 60, 28);
             this.comboPetType.TabIndex = 1;
+            this.comboPetType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 
-            this.comboFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Формат данных:";
+            this.label3.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            this.comboFormat.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboFormat.FormattingEnabled = true;
-            this.comboFormat.Location = new System.Drawing.Point(200, 130);
+            this.comboFormat.Location = new System.Drawing.Point(30, 195);
             this.comboFormat.Name = "comboFormat";
-            this.comboFormat.Size = new System.Drawing.Size(250, 28);
+            this.comboFormat.Size = new System.Drawing.Size(leftPanelWidth - 60, 28);
             this.comboFormat.TabIndex = 2;
+            this.comboFormat.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 
-            this.btnShowPets.Location = new System.Drawing.Point(30, 330);
+            this.checkOpenArea.AutoSize = true;
+            this.checkOpenArea.Location = new System.Drawing.Point(30, 250);
+            this.checkOpenArea.Name = "checkOpenArea";
+            this.checkOpenArea.Size = new System.Drawing.Size(269, 24);
+            this.checkOpenArea.TabIndex = 6;
+            this.checkOpenArea.Text = "Только с открытой площадкой";
+            this.checkOpenArea.UseVisualStyleBackColor = true;
+            this.checkOpenArea.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            this.checkClaustrophobic.AutoSize = true;
+            this.checkClaustrophobic.Location = new System.Drawing.Point(30, 290);
+            this.checkClaustrophobic.Name = "checkClaustrophobic";
+            this.checkClaustrophobic.Size = new System.Drawing.Size(241, 24);
+            this.checkClaustrophobic.TabIndex = 7;
+            this.checkClaustrophobic.Text = "Показать клаустрофобных";
+            this.checkClaustrophobic.UseVisualStyleBackColor = true;
+            this.checkClaustrophobic.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            this.btnShowPets.Location = new System.Drawing.Point(30, 400);
             this.btnShowPets.Name = "btnShowPets";
             this.btnShowPets.Size = new System.Drawing.Size(200, 40);
             this.btnShowPets.TabIndex = 3;
             this.btnShowPets.Text = "Показать питомцев";
             this.btnShowPets.UseVisualStyleBackColor = true;
             this.btnShowPets.Click += new System.EventHandler(this.btnShowPets_Click);
+            this.btnShowPets.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 
-            this.btnSave.Location = new System.Drawing.Point(30, 390);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(200, 40);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Сохранить";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-
-            this.btnLoad.Location = new System.Drawing.Point(250, 390);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(200, 40);
-            this.btnLoad.TabIndex = 5;
-            this.btnLoad.Text = "Загрузить";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-
-            this.checkOpenArea.AutoSize = true;
-            this.checkOpenArea.Location = new System.Drawing.Point(30, 230);
-            this.checkOpenArea.Name = "checkOpenArea";
-            this.checkOpenArea.Size = new System.Drawing.Size(269, 24);
-            this.checkOpenArea.TabIndex = 6;
-            this.checkOpenArea.Text = "Только с открытой площадкой";
-            this.checkOpenArea.UseVisualStyleBackColor = true;
-
-            this.checkClaustrophobic.AutoSize = true;
-            this.checkClaustrophobic.Location = new System.Drawing.Point(30, 270);
-            this.checkClaustrophobic.Name = "checkClaustrophobic";
-            this.checkClaustrophobic.Size = new System.Drawing.Size(241, 24);
-            this.checkClaustrophobic.TabIndex = 7;
-            this.checkClaustrophobic.Text = "Показать клаустрофобных";
-            this.checkClaustrophobic.UseVisualStyleBackColor = true;
-
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Выберите приют:";
-
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Тип животного:";
-
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Формат данных:";
-
-            this.btnGenerate.Location = new System.Drawing.Point(250, 330);
+            this.btnGenerate.Location = new System.Drawing.Point(250, 400);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(200, 40);
             this.btnGenerate.TabIndex = 11;
             this.btnGenerate.Text = "Сгенерировать данные";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            this.btnGenerate.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 
-            this.ClientSize = new System.Drawing.Size(500, 460);
+            this.btnSave.Location = new System.Drawing.Point(30, 460);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(200, 40);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+
+            this.btnLoad.Location = new System.Drawing.Point(250, 460);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(200, 40);
+            this.btnLoad.TabIndex = 5;
+            this.btnLoad.Text = "Загрузить";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -134,6 +153,7 @@
             this.Controls.Add(this.comboShelters);
             this.Name = "MainForm";
             this.Text = "PetShelter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
         }

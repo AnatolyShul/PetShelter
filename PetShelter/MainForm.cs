@@ -25,6 +25,7 @@ namespace PetShelter
         {
             InitializeComponent();
             InitializeData();
+
         }
 
         private void InitializeData()

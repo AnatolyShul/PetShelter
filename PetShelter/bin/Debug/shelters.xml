@@ -9,7 +9,7 @@
         <Name>Мурзик</Name>
         <Age>3</Age>
         <Weight>4.5</Weight>
-        <IsClaustrophobic>false</IsClaustrophobic>
+        <IsClaustrophobic>true</IsClaustrophobic>
         <IsIndoor>true</IsIndoor>
         <IsFriendly>true</IsFriendly>
       </Pet>
